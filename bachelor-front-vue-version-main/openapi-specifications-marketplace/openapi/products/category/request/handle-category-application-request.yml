@@ -1,0 +1,7 @@
+HandleCategoryApplicationRequest:
+  type: object
+  properties:
+    categoryId:
+      type: string
+    categoryState:
+      $ref: '../model/enum/category-application-response.yml#/CategoryApplicationResponse'

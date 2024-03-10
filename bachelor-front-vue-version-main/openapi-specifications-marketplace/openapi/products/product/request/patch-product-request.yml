@@ -1,0 +1,23 @@
+PatchProductRequest:
+  type: object
+  required:
+    - id
+  properties:
+    id:
+      type: string
+    name:
+      type: string
+    price:
+      type: number
+    categoryId:
+      type: string
+    description:
+      type: string
+    stockAmount:
+      type: integer
+    mainImage:
+      $ref: '../model/product-image.yml#/ProductImage'
+    additionalImages:
+      type: array
+      items:
+        $ref: '../model/product-image.yml#/ProductImage'

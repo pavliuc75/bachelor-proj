@@ -1,0 +1,9 @@
+CreateNewCommentReplyRequest:
+  type: object
+  properties:
+    productId:
+      type: string
+    targetCommentId:
+      type: string
+    text:
+      type: string

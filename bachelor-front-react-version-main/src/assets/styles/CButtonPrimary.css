@@ -1,0 +1,3 @@
+.hover-is-disabled:hover {
+    color: var(--mid-gray) !important;
+}

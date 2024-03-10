@@ -1,0 +1,13 @@
+Cart:
+  type: object
+  properties:
+    products:
+      type: array
+      items:
+        $ref: 'product-in-cart.yml#/ProductInCart'
+    totalElements:
+      type: integer
+      readOnly: true
+    totalPrice:
+      type: number
+      readOnly: true

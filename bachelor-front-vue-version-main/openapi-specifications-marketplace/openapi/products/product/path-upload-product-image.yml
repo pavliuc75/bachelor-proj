@@ -1,0 +1,20 @@
+post:
+  operationId: uploadProductImage
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: 'request/upload-product-image-request.yml#/UploadProductImageRequest'
+  responses:
+    '201':
+      description: Product image uploaded
+      content:
+        application/json:
+          schema:
+            $ref: 'model/product-image.yml#/ProductImage'
+    '409':
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

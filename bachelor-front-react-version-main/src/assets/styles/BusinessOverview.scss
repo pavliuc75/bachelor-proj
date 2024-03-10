@@ -1,0 +1,14 @@
+[data-css='BusinessOverview'] {
+  td p:first-child {
+    @apply pr-10;
+  }
+
+  table td {
+    border-top: 8px solid transparent;
+    vertical-align: top;
+  }
+
+  table tr:first-child td {
+    border-top: 0;
+  }
+}

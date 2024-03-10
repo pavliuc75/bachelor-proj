@@ -1,0 +1,5 @@
+CreateNewSupportThreadRequest:
+  type: object
+  properties:
+    topic:
+      type: string

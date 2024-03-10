@@ -1,0 +1,7 @@
+TemplateResponse:
+  type: object
+  required:
+    - user
+  properties:
+    user:
+      $ref: '../model/model.yml#/Template'

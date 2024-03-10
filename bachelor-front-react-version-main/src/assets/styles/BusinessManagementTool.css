@@ -1,0 +1,6 @@
+@media (min-width: 640px) {
+    [data-css="BusinessManagementTool"] main {
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,40 @@
+get:
+  description: Search Product by name or description.
+  operationId: searchProduct
+  parameters:
+    - in: query
+      name: text
+      description: Product name or description
+      required: true
+      schema:
+        type: string
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: sortBy
+      required: false
+      schema:
+        $ref: 'model/enum/sort-product-by.yml#/SortProductBy'
+    - in: query
+      name: "filterBy"
+      required: false
+      description: Filter product by category or stock availability.
+      schema:
+        $ref: 'request/filter-product-by-request.yml#/FilterProductBy'
+  responses:
+    '201':
+      description: List of products
+      content:
+        application/json:
+          schema:
+            $ref: 'response/get-product-list-response.yml#/ProductListResponse'

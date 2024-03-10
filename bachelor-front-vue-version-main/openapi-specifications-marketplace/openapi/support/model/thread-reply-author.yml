@@ -1,0 +1,9 @@
+ThreadReplyAuthor:
+  type: object
+  properties:
+    userId:
+      type: string
+    email:
+      type: string
+    isCreatorOfTheThread:
+      type: boolean

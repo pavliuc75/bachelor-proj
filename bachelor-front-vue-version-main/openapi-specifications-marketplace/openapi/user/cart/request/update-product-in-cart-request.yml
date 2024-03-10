@@ -1,0 +1,11 @@
+UpdateProductInCartRequest:
+  properties:
+    productId:
+        type: string
+    amount:
+      type: integer
+      minimum: 1
+      maximum: 1000
+      default: 1
+      description: The amount of the product to add to the cart.
+      example: 1

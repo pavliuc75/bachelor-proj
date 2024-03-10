@@ -1,0 +1,10 @@
+PatchOrderToFulfillStatusRequest:
+  type: object
+  required:
+    - orderId
+    - status
+  properties:
+    orderId:
+      type: string
+    status:
+      $ref: '../model/order-status.yml#/OrderStatus'

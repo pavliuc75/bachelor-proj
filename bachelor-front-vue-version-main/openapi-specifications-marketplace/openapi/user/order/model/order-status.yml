@@ -1,0 +1,8 @@
+OrderStatus:
+  type: string
+  enum:
+    - AWAITING_SHIPMENT
+    - READY_FOR_SHIPMENT
+    - SHIPPED
+    - AWAITING_PICKUP
+    - COMPLETED

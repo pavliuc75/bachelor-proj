@@ -1,0 +1,14 @@
+BusinessApplicationListResponse:
+  type: object
+  required:
+    - businessApplicationList
+  properties:
+    businessApplicationPageList:
+      type: array
+      items:
+        $ref: '../model/business-application.yml#/BusinessApplication'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

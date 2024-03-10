@@ -1,0 +1,13 @@
+get:
+  description: Get current user wishlist
+  operationId: getUserWishlist
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/wishlist.yml#/Wishlist'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

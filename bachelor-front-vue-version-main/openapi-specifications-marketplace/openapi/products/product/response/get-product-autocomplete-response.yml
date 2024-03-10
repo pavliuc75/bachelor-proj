@@ -1,0 +1,13 @@
+AutocompleteProductResponse:
+  type: array
+  items:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      price:
+        type: number
+      mainImage:
+        $ref: '../model/product-image.yml#/ProductImage'

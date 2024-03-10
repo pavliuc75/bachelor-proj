@@ -1,0 +1,6 @@
+BusinessApplicationState:
+  type: string
+  enum:
+    - InReview
+    - Approved
+    - Denied

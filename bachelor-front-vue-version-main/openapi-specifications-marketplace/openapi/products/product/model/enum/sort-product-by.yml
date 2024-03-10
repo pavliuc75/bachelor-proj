@@ -1,0 +1,11 @@
+SortProductBy:
+  type: string
+  enum:
+    - PRICE_ASC
+    - PRICE_DSC
+    - NAME_ASC
+    - NAME_DSC
+    - TOTAL_SOLD_ASC
+    - TOTAL_SOLD_DSC
+    - RATING_ASC
+    - RATING_DSC

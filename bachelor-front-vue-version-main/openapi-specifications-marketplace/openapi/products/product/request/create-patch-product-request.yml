@@ -1,0 +1,29 @@
+ProductRequest:
+  type: object
+  required:
+    - name
+    - price
+    - description
+    - stockAmount
+    - mainImage
+  properties:
+    name:
+      type: string
+      example: Pizza
+    price:
+      type: number
+      example: 100
+    categoryId:
+      type: string
+      example: 6383575de386f4192c3ad27c
+    description:
+      type: string
+    stockAmount:
+      type: integer
+      example: 10
+    mainImage:
+      $ref: '../model/product-image.yml#/ProductImage'
+    additionalImages:
+      type: array
+      items:
+        $ref: '../model/product-image.yml#/ProductImage'

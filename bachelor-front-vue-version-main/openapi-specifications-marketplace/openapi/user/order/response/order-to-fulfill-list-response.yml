@@ -1,0 +1,12 @@
+OrderToFulfillListResponse:
+  type: object
+  properties:
+    orderList:
+      type: array
+      items:
+        $ref: '../model/order-to-fulfill.yml#/OrderToFulfill'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

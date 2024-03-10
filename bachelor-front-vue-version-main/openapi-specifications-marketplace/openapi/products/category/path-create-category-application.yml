@@ -1,0 +1,19 @@
+post:
+  description: Create new category application
+  operationId: createCategoryApplication
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-category-application-request.yml#/CreateCategoryApplicationRequest'
+  responses:
+    '201':
+      description: New category application has been created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/category-application.yml#/CategoryApplication'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,14 @@
+ThreadReplyPageResponse:
+  type: object
+  required:
+    - businessForAdminList
+  properties:
+    ThreadReplyPageList:
+      type: array
+      items:
+        $ref: '../model/thread-reply.yml#/ThreadReply'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

@@ -1,0 +1,22 @@
+delete:
+  description: Delete product by id for admin/business owner
+  operationId: deleteProductById
+  parameters:
+    - in: query
+      name: productId
+      description: productId
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: id of deleted product
+      content:
+        application/json:
+          name: deletedId
+          schema:
+            type: string
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

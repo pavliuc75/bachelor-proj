@@ -1,0 +1,16 @@
+SupportThread:
+  type: object
+  properties:
+    supportThreadId:
+      type: string
+    threadAuthorId:
+      type: string
+    threadAuthorEmail:
+      type: string
+    threadTopic:
+      type: string
+    isActive:
+      type: boolean
+    createdDate:
+      type: string
+      format: date-time

@@ -1,0 +1,4 @@
+.hover-disabled:hover {
+    color: var(--mid-gray) !important;
+    text-decoration: underline !important;
+}

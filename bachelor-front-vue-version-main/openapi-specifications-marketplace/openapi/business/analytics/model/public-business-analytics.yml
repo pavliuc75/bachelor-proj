@@ -1,0 +1,14 @@
+PublicBusinessAnalytics:
+  type: object
+  properties:
+    id:
+      type: string
+    soldProductsTotal:
+        type: integer
+        description: sold products total
+    averageProductRating:
+        type: number
+        description: average product rating
+    belongsToBusinessId:
+        type: string
+        description: business id

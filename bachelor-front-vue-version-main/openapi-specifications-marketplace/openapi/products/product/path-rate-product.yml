@@ -1,0 +1,21 @@
+post:
+  description: Rate a product, product should be in the order with status completed
+  operationId: rateProduct
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/rate-product-request.yml#/RateProductRequest'
+  responses:
+    '201':
+      description: Product rated
+      content:
+        application/json:
+          schema:
+            $ref: 'model/product.yml#/Product'
+    '409':
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,7 @@
+ProductInCart:
+  type: object
+  properties:
+    product:
+      $ref: '../../../products/product/model/product.yml#/Product'
+    amount:
+      type: integer

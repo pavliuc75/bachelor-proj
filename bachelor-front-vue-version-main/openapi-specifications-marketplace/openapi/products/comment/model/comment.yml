@@ -1,0 +1,18 @@
+Comment:
+  type: object
+  properties:
+    commentNodeId:
+      type: string
+    productTreeId:
+      type: string
+    children:
+      type: array
+      items:
+        $ref: 'comment.yml#/Comment'
+    author:
+      $ref: 'author.yml#/Author'
+    text:
+      type: string
+    createdDate:
+      type: string
+      format: date-time

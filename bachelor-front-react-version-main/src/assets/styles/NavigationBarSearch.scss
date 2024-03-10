@@ -1,0 +1,15 @@
+[data-css="NavigationBarSearch"] {
+  input:focus + div {
+    border-left-width: 2px;
+    border-color: var(--dark-blue) !important;
+  }
+
+  input:focus + div + div {
+    right: 1px;
+    color: var(--dark-blue);
+  }
+
+  li:hover .text-cinder {
+    @apply underline cursor-default;
+  }
+}

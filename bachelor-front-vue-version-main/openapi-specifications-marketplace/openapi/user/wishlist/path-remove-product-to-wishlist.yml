@@ -1,0 +1,17 @@
+delete:
+  operationId: removeProductFromWishlist
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/add-remove-product-to-wishlist.yml#/AddRemoveProductToWishlistRequest'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/wishlist.yml#/Wishlist'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

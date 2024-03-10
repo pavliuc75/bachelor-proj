@@ -1,0 +1,18 @@
+patch:
+  operationId: patchProduct
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/patch-product-request.yml#/PatchProductRequest'
+  responses:
+    '200':
+      description: product patched
+      content:
+        application/json:
+          schema:
+            $ref: 'model/product.yml#/Product'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

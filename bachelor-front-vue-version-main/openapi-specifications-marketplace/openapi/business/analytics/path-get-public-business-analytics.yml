@@ -1,0 +1,19 @@
+get:
+  operationId: getPublicBusinessAnalytics
+  summary: Get public business analytics
+  description: Get public business analytics
+  parameters:
+    - in: query
+      name: businessId
+      description: business id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/public-business-analytics.yml#/PublicBusinessAnalytics'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'

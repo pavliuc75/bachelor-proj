@@ -1,0 +1,8 @@
+RateProductRequest:
+  type: object
+  properties:
+    productId:
+      type: string
+    rating:
+      type: number
+

@@ -1,0 +1,12 @@
+ProductListResponse:
+  type: object
+  properties:
+    productList:
+      type: array
+      items:
+        $ref: '../model/product.yml#/Product'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

@@ -1,0 +1,18 @@
+Order:
+  type: object
+  properties:
+    id:
+      type: string
+    orderItems:
+      type: array
+      items:
+        $ref: 'order-to-fulfill.yml#/OrderToFulfill'
+    placedBy:
+      type: string
+    orderStatus:
+      $ref: 'order-status.yml#/OrderStatus'
+    shippingDetails:
+      $ref: 'shipping-details.yml#/ShippingDetails'
+    createdDate:
+      type: string
+      format: date-time

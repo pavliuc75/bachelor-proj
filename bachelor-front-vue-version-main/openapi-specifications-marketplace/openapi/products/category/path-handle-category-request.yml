@@ -1,0 +1,19 @@
+patch:
+  description: handle new category application
+  operationId: handleNewCategoryApplication
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/handle-category-application-request.yml#/HandleCategoryApplicationRequest'
+  responses:
+    '201':
+      description: new category created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/category.yml#/Category'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,40 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  config:
+    import:
+      - optional:file:./back-end-bloom/src/main/resources/env.properties
+      - optional:file:./target/classes/env.properties
+  data:
+    mongodb:
+      uri: ${MONGO_DB_URL}
+      database: ${DATABASE_NAME}
+keycloak:
+  #  /TODO CHANGE disable-trust-manager FOR PRODUCTION
+  disable-trust-manager: true
+  bearer-only: true
+  realm: ${KEYCLOAK_REALM}
+  resource: ${KEYCLOAK_RESOURCE}
+  auth-server-url: ${KEYCLOAK_AUTHSERVERURL}
+  credentials:
+    secret: ${KEYCLOAK_CREDENTIALS_SECRET}
+cloud:
+  aws:
+    s3buckets:
+      business: ${BUSINESS_AWS_S3BUCKETS_NAME}
+      product: ${PRODUCTS_AWS_S3BUCKETS_NAME}
+    credentials:
+      access-key: ${AWS_KEY}
+      secret-key: ${AWS_SECRET_ACCESS_KEY}
+    region:
+      static: ${AWS_REGION}
+      auto: false
+stripe:
+  api-key: ${STRIPE_API_KEY}
+  checkout-success-url: ${CHECKOUT_SUCCESS_URL}
+  checkout-failure-url: ${CHECKOUT_FAILURE_URL}
+
+server:
+  port : 8000

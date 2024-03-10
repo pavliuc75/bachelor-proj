@@ -1,0 +1,14 @@
+get:
+  description: get current authenticated user information
+  operationId: getCurrentUserInfo
+  responses:
+    '200':
+      description: user given
+      content:
+        application/json:
+          schema:
+            $ref: 'model/user.yml#/AppUser'
+    '404':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

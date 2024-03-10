@@ -1,0 +1,19 @@
+post:
+  description: Create new user
+  operationId: createUser
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-user.yml#/NewUserRequest'
+  responses:
+    '201':
+      description: New user created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/user.yml#/AppUser'
+    '409':
+      $ref: '../api-error.yml#/ApiError'
+    'default':
+      $ref: '../api-error.yml#/ApiError'

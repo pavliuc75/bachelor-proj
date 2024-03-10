@@ -1,0 +1,19 @@
+post:
+  description: Close support thread
+  operationId: closeSupportThread
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/close-support-thread-request.yml#/CloseSupportThreadRequest'
+  responses:
+    '201':
+      description: Support thread closed
+      content:
+        application/json:
+          schema:
+            $ref: 'model/support-thread.yml#/SupportThread'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

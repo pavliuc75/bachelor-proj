@@ -1,0 +1,12 @@
+CategoryApplicationListResponse:
+  type: object
+  properties:
+    categoryApplicationList:
+      type: array
+      items:
+        $ref: '../model/category-application.yml#/CategoryApplication'
+    totalAmountOfPage:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

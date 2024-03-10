@@ -1,0 +1,19 @@
+post:
+  description: Create support thread
+  operationId: createSupportThread
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-new-support-thread-request.yml#/CreateNewSupportThreadRequest'
+  responses:
+    '201':
+      description: Support thread submitted
+      content:
+        application/json:
+          schema:
+            $ref: 'model/support-thread.yml#/SupportThread'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

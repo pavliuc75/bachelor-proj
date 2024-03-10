@@ -1,0 +1,14 @@
+get:
+  operationId: getMarketplaceAnalytics
+  summary: Get marketplace analytics, accessible only by admin
+  description: Get marketplace analytics
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/marketplace-business-analytics.yml#/MarketplaceBusinessAnalytics'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

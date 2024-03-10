@@ -1,0 +1,5 @@
+BusinessState:
+  type: string
+  enum:
+    - Active
+    - Blocked

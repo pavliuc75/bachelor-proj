@@ -1,0 +1,5 @@
+.account-button-wrapper:hover p,
+.account-button-wrapper:hover h4,
+.account-button-wrapper:hover .account-button-icon {
+    @apply text-dark-blue;
+}

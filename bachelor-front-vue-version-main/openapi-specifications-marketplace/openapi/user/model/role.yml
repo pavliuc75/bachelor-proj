@@ -1,0 +1,6 @@
+Role:
+  type: string
+  enum:
+    - BUSINESS_OWNER
+    - CUSTOMER
+    - ADMIN

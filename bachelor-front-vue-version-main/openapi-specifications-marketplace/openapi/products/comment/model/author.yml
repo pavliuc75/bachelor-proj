@@ -1,0 +1,9 @@
+Author:
+  type: object
+  properties:
+    userId:
+      type: string
+    email:
+      type: string
+    isProductOwner:
+      type: boolean

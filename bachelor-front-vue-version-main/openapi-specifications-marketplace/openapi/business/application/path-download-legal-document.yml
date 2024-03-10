@@ -1,0 +1,23 @@
+get:
+  description: Download legal document
+  operationId: downloadLegalDocument
+  parameters:
+   - in: path
+     name: fileKeyBase64Encoded
+     description: AWS S3 File key encoded in base64
+     required: true
+     schema:
+       type: string
+       format: base64
+  responses:
+   '200':
+     description: OK
+     content:
+       application/octet-stream:
+         schema:
+           type: string
+           format: binary
+  'default':
+    $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

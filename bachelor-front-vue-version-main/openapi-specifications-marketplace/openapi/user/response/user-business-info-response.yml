@@ -1,0 +1,12 @@
+UserBusinessInfoResponse:
+  type: object
+  required:
+    - user
+  properties:
+    business:
+      $ref: '../../business/business/model/business.yml#/Business'
+    businessApplication:
+      $ref: '../../business/application/model/business-application.yml#/BusinessApplication'
+    businessApplicationReview:
+      $ref: '../../business/review/model/business-application-review.yml#/BusinessApplicationReview'
+

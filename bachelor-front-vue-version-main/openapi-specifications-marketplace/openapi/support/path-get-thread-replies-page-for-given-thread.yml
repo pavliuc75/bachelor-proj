@@ -1,0 +1,33 @@
+get:
+  description: get thread replies page for given thread
+  operationId: getThreadRepliesPage
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: threadId
+      description: support thread id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      description: List of thread replies supplied
+      content:
+        application/json:
+          schema:
+            $ref: 'response/thread-reply-page-response.yml#/ThreadReplyPageResponse'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

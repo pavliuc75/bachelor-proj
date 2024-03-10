@@ -1,0 +1,25 @@
+get:
+  description: get business list
+  operationId: getBusinessListForPublic
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+  responses:
+    '201':
+      description: List of business supplied
+      content:
+        application/json:
+          schema:
+            $ref: 'response/business-list-for-public-response.yml#/BusinessForPublicListResponse'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'

@@ -1,0 +1,20 @@
+UpdateBusinessApplicationRequest:
+  type: object
+  required:
+    - id
+    - businessDescription
+    - businessPaymentDetails
+    - businessLegalDocuments
+  properties:
+    id:
+      type: string
+    businessDescription:
+      $ref: '../../common/model/business-description.yml#/BusinessDescription'
+    businessPaymentDetails:
+      $ref: '../../common/model/business-payment-details.yml#/BusinessPaymentDetails'
+    businessLegalDocuments:
+      $ref: '../../common/model/business-legal-documents.yml#/BusinessLegalDocuments'
+    businessContacts:
+      $ref: '../../common/model/business-contacts.yml#/BusinessContacts'
+    businessLogo:
+      $ref: '../../common/model/business-company-logo.yml#/BusinessLogo'

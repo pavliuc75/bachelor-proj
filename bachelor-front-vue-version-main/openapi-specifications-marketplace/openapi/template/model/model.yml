@@ -1,0 +1,9 @@
+Template:
+  type: object
+  required:
+    - id
+  properties:
+    id:
+      type: string
+    firstName:
+      $ref: 'fields/email.yml#/FieldTemplate'

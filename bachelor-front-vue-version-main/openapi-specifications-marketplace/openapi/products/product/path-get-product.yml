@@ -1,0 +1,18 @@
+get:
+  description: Get Product by id
+  operationId: getProductById
+  parameters:
+    - in: query
+      name: productId
+      description: Product id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/product.yml#/Product'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'

@@ -1,0 +1,12 @@
+BusinessLogo:
+  type: object
+  required:
+    - logoKey
+    - logoFileUrl
+  properties:
+    logoKey:
+      description: File key from AWS S3 bucket
+      type: string
+    logoFileUrl:
+      description: AWS S3 Object Url to bank statement file
+      type: string

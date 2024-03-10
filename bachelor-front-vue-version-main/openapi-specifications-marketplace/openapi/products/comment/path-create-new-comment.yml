@@ -1,0 +1,19 @@
+post:
+  description: Create new comment to the post
+  operationId: createNewComment
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-new-comment-request.yml#/CreateNewCommentRequest'
+  responses:
+    '201':
+      description: New comment has been created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/comment.yml#/Comment'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

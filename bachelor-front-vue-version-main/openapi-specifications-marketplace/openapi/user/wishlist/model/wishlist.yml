@@ -1,0 +1,10 @@
+Wishlist:
+  type: object
+  properties:
+    id:
+      type: string
+    wishlist:
+      type: array
+      items:
+        $ref: '../../../products/product/model/product.yml'
+

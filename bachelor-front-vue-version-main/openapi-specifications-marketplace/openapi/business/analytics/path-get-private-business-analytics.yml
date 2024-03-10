@@ -1,0 +1,14 @@
+get:
+  operationId: getPrivateBusinessAnalytics
+  summary: Get private business analytics, accessible only by business owner
+  description: Get private business analytics
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/private-business-analytics.yml#/PrivateBusinessAnalytics'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

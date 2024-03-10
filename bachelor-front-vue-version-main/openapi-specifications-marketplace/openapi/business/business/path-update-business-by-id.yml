@@ -1,0 +1,22 @@
+put:
+  description: Update business
+  operationId: updateBusiness
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/update-business-request.yml#/UpdateBusinessRequest'
+  responses:
+    '201':
+      description: Business updated
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business.yml#/Business'
+    '404':
+      description: Business application with given id not found
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

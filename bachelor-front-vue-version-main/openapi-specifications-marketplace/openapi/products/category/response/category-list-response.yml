@@ -1,0 +1,12 @@
+CategoryListResponse:
+  type: object
+  properties:
+    categoryList:
+      type: array
+      items:
+        $ref: '../model/category.yml#/Category'
+    totalAmountOfPage:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

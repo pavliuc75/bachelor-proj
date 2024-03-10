@@ -1,0 +1,5 @@
+CreateCategoryApplicationRequest:
+  type: object
+  properties:
+    category:
+      type: string

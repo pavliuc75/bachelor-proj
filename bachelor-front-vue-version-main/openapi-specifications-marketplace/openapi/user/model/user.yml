@@ -1,0 +1,25 @@
+AppUser:
+  type: object
+  properties:
+    firstName:
+      $ref: 'fields/first-name.yml#/FirstName'
+    lastName:
+      $ref: 'fields/last-name.yml#/LastName'
+    email:
+      $ref: 'fields/email.yml#/Email'
+    businessApplicationId:
+      type: string
+    businessId:
+      type: string
+    roles:
+      type: array
+      items:
+        $ref: 'role.yml#/Role'
+    cart:
+      $ref: '../cart/model/cart.yml#/Cart'
+    wishlist:
+      $ref: '../wishlist/model/wishlist.yml#/Wishlist'
+    ratedProductList:
+      type: array
+      items:
+        $ref: '../../products/product/model/user-product-rating.yml#/UserProductRating'

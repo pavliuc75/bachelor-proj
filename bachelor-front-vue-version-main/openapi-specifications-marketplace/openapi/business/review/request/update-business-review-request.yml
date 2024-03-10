@@ -1,0 +1,14 @@
+UpdateBusinessReviewRequest:
+  type: object
+  required:
+    -id
+    -businessReviewState
+    -businessReviewDescription
+  properties:
+    id:
+      type: string
+    businessReviewState:
+      $ref: '../model/enum/business-review-state.yml#/BusinessReviewState'
+    businessReviewDescription:
+      type: string
+      example: business was rejected because ...

@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dark-blue: #0064a8;
+    --havelock-blue: #5da0d7;
+    --mid-gray: #69696c;
+    --spun-pearl: #aeadb1;
+    --white-lilac: #f6f5fb;
+    --cinder: #010102;
+    --error: #ff0000;
+    --background: rgba(93, 160, 215, 0.33);
+    --loading-overlay: rgba(255, 255, 255, 0.66);
+}
+
+html, body {
+    @apply text-cinder;
+    @apply leading-157;
+    font-family: Roboto, sans-serif !important;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    overflow-y: scroll;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    margin: 0;
+}
+
+.container {
+    @apply px-4;
+    @apply sm:px-0;
+}
+
+h1 {
+    font-size: 36px;
+    @apply leading-133;
+    @apply font-bold;
+}
+
+h2 {
+    @apply leading-133;
+    @apply font-bold;
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    @apply font-bold;
+    @apply leading-145;
+}
+
+h4 {
+    font-size: 16px;
+    @apply font-bold;
+    @apply leading-145;
+}
+
+p {
+    @apply leading-157;
+    font-size: 14px;
+    @apply text-mid-gray;
+}
+
+.label {
+    @apply leading-157;
+    font-size: 14px;
+}
+
+.c-text-12 {
+    @apply leading-150;
+    font-size: 12px;
+}
+
+.c-text-14 {
+    @apply leading-157;
+    font-size: 14px;
+}
+
+.c-invisible-wrapper {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+

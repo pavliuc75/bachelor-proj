@@ -1,0 +1,20 @@
+BusinessApplicationReview:
+  type: object
+  required:
+    -id
+    -ReviewAuthorId
+    -businessApplicationId
+    -reviewStatus
+    -reviewReason
+  properties:
+    id:
+      type: string
+    BusinessApplicationId:
+      type: string
+    ReviewAuthorId:
+      type: string
+    businessReviewState:
+      $ref: 'enum/business-review-state.yml#/BusinessReviewState'
+    businessReviewDescription:
+      type: string
+      example: business was rejected because ...

@@ -1,0 +1,18 @@
+post:
+  description: Post product to users cart
+  operationId: postProductInCart
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/post-product-in-cart-request.yml#/AddProductToCartRequest'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/cart.yml#/Cart'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

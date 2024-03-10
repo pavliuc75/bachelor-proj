@@ -1,0 +1,13 @@
+delete:
+  description: Delete current users cart. A empty cart will be recreated and attached to the user
+  operationId: recycleCart
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/cart.yml#/Cart'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

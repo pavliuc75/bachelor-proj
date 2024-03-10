@@ -1,0 +1,15 @@
+PrivateBusinessAnalytics:
+  type: object
+  properties:
+    id:
+      type: string
+    belongsToBusinessId:
+        type: string
+    totalNumberOfCompletedOrders:
+        type: integer
+    totalNumberOfOrdersToBeCompleted:
+        type: integer
+    totalIncome:
+        type: number
+    totalSoldAmountProducts:
+        type: integer

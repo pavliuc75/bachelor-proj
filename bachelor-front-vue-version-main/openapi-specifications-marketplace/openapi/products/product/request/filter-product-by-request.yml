@@ -1,0 +1,11 @@
+FilterProductBy:
+  type: object
+  properties:
+    category:
+      type: array
+      example: 6383575de386f4192c3ad27c
+      items:
+        type: string
+    inStock:
+      type: boolean
+      example: true

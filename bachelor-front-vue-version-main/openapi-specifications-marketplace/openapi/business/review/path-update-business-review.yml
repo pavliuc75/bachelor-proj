@@ -1,0 +1,22 @@
+patch:
+  description: Update business application review
+  operationId: updateBusinessApplicationReview
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/update-business-review-request.yml#/UpdateBusinessReviewRequest'
+  responses:
+    '201':
+      description: Business application review has been updated
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business-application-review.yml#/BusinessApplicationReview'
+    '404':
+      description: Review with given id is not found
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

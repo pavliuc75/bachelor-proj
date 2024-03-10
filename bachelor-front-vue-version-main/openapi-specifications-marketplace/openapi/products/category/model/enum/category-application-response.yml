@@ -1,0 +1,5 @@
+CategoryApplicationResponse:
+  type: string
+  enum:
+    - Approve
+    - Deny

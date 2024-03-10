@@ -1,0 +1,9 @@
+variables:
+  CONTAINER_VERSION: '0.1.0'
+  BUILD_EXTRA_OPTIONS: "--build-arg KEYCLOAK_ADMIN=$KEYCLOAK_ADMIN --build-arg KEYCLOAK_ADMIN_PASSWORD=$KEYCLOAK_ADMIN_PASSWORD --build-arg KC_DB_USERNAME=$KC_DB_USERNAME --build-arg KC_DB_PASSWORD=$KC_DB_PASSWORD --build-arg KC_DB_URL_HOST=$KC_DB_URL_HOST"
+  BRANCH_LATEST_TAG: "true"
+  
+include:
+  - project: "bitstrive/pipelinetemplates/docker"
+    ref: "main"
+    file: "pipeline.yml"

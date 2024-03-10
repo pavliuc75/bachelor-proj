@@ -1,0 +1,30 @@
+Product:
+  type: object
+  properties:
+    id:
+      type: string
+    belongsToBusinessId:
+      type: string
+    name:
+      type: string
+    categoryId:
+      type: string
+    price:
+      type: number
+    description:
+      type: string
+    rating:
+      $ref: './product-rating.yml#/ProductRating'
+    listedDate:
+      type: string
+      format: date-time
+    stockAmount:
+      type: integer
+    totalSold:
+      type: integer
+    mainImage:
+      $ref: 'product-image.yml#/ProductImage'
+    additionalImages:
+      type: array
+      items:
+        $ref: '../model/product-image.yml#/ProductImage'

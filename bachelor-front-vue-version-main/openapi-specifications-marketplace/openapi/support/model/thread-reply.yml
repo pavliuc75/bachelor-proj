@@ -1,0 +1,18 @@
+ThreadReply:
+  type: object
+  properties:
+    threadReplyId:
+      type: string
+    parentThreadId:
+      type: string
+    text:
+      type: string
+    author:
+      $ref: 'thread-reply-author.yml#/ThreadReplyAuthor'
+    createdDate:
+      type: string
+      format: date-time
+
+
+
+

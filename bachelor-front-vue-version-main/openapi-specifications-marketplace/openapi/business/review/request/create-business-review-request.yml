@@ -1,0 +1,14 @@
+CreateBusinessReviewRequest:
+  type: object
+  required:
+    -businessApplicationId
+    -businessReviewState
+    -businessReviewDescription
+  properties:
+    businessApplicationId:
+      type: string
+    businessReviewState:
+      $ref: '../model/enum/business-review-state.yml#/BusinessReviewState'
+    businessReviewDescription:
+      type: string
+      example: business was rejected because ...

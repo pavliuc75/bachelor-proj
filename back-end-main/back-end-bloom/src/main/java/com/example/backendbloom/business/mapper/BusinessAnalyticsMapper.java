@@ -1,0 +1,18 @@
+package com.example.backendbloom.business.mapper;
+
+import com.backendbloom.openapi.model.MarketplaceBusinessAnalytics;
+import com.backendbloom.openapi.model.PrivateBusinessAnalytics;
+import com.backendbloom.openapi.model.PublicBusinessAnalytics;
+import com.example.backendbloom.business.model.business.MarketplaceBusinessAnalyticsModel;
+import com.example.backendbloom.business.model.business.PrivateBusinessAnalyticsModel;
+import com.example.backendbloom.business.model.business.PublicBusinessAnalyticsModel;
+import org.mapstruct.Mapper;
+
+@Mapper
+public interface BusinessAnalyticsMapper {
+    PublicBusinessAnalyticsModel publicBusinessAnalyticsToPublicBusinessAnalyticsModel(PublicBusinessAnalytics publicBusinessAnalytics);
+    PublicBusinessAnalytics publicBusinessAnalyticsModelToPublicBusinessAnalytics(PublicBusinessAnalyticsModel publicBusinessAnalyticsModel);
+    PrivateBusinessAnalyticsModel privateBusinessAnalyticsToPrivateBusinessAnalyticsModel(PublicBusinessAnalytics publicBusinessAnalytics);
+    PrivateBusinessAnalytics privateBusinessAnalyticsModelToPrivateBusinessAnalytics(PrivateBusinessAnalyticsModel privateBusinessAnalyticsModel);
+    MarketplaceBusinessAnalytics marketplaceBusinessAnalyticsModelToMarketplaceBusinessAnalytics(MarketplaceBusinessAnalyticsModel marketplaceBusinessAnalyticsModel);
+}

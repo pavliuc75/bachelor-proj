@@ -1,0 +1,27 @@
+get:
+  description: get category applications list for admin
+  operationId: getCategoryList
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+  responses:
+    '201':
+      description: List of category applications supplied
+      content:
+        application/json:
+          schema:
+            $ref: 'response/category-list-response.yml#/CategoryListResponse'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

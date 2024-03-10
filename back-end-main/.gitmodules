@@ -1,0 +1,3 @@
+[submodule "openapi-specifications-marketplace"]
+	path = openapi-specifications-marketplace
+	url = ../openapi-specifications-marketplace.git

@@ -1,0 +1,31 @@
+get:
+  description: Get product by business
+  operationId: getProductsByBusiness
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: businessId
+      description: Business Id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      description: List of products
+      content:
+        application/json:
+          schema:
+            $ref: 'response/get-product-list-response.yml#/ProductListResponse'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'

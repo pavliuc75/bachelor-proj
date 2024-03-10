@@ -1,0 +1,14 @@
+get:
+  description: get active support thread for current user
+  operationId: getActiveSupportThreadForCurrentUser
+  responses:
+    '201':
+      description: active support thread given
+      content:
+        application/json:
+          schema:
+            $ref: 'model/support-thread.yml#/SupportThread'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

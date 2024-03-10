@@ -1,0 +1,15 @@
+BusinessPaymentDetails:
+  type: object
+  required:
+    - iban
+    - bank
+    - swiftCode
+  properties:
+    iban:
+      type: string
+      example: MD71MO2224ASV62459567100
+    bank:
+      type: string
+      example: EximBank
+    swiftCode:
+      type: string

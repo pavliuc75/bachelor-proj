@@ -1,0 +1,6 @@
+PutCartRequest:
+  type: array
+  items:
+    type: object
+    properties:
+      $ref: '../../products/product/model/product.yml#/Product'

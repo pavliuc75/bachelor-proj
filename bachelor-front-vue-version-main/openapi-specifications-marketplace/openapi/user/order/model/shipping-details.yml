@@ -1,0 +1,13 @@
+ShippingDetails:
+  type: object
+  properties:
+    id:
+      type: string
+    city:
+      type: string
+    country:
+      type: string
+    address:
+      type: string
+    postalCode:
+      type: string

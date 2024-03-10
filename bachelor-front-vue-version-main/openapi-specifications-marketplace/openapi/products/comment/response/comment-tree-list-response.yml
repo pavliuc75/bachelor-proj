@@ -1,0 +1,12 @@
+CommentTreeListResponse:
+  type: object
+  properties:
+    commentTreeList:
+      type: array
+      items:
+        $ref: '../model/comment.yml#/Comment'
+    totalAmountOfPage:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

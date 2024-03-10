@@ -1,0 +1,20 @@
+post:
+  operationId: createProduct
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-patch-product-request.yml#/ProductRequest'
+  responses:
+    '201':
+      description: New product created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/product.yml#/Product'
+    '409':
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

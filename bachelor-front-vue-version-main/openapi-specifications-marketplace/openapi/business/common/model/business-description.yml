@@ -1,0 +1,31 @@
+BusinessDescription:
+  type: object
+  required:
+    - legalName
+    - businessEntityType
+    - uniqueIdentificationCode
+    - tvaNumber
+  properties:
+    legalName:
+      type: string
+      example: Bloom
+    businessEntityType:
+      type: string
+      enum:
+        - SRL
+        - SA
+        - SC
+        - SNC
+        - Other
+    uniqueIdentificationCode:
+      type: number
+      example: 1013600016479
+      minLength: 13
+      maxLength: 13
+    tvaNumber:
+      type: number
+      example: 0507029
+      minLength: 7
+      maxLength: 7
+    companyDescription:
+      type: string

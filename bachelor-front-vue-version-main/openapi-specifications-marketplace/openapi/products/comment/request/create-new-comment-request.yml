@@ -1,0 +1,7 @@
+CreateNewCommentRequest:
+  type: object
+  properties:
+    productId:
+      type: string
+    text:
+      type: string

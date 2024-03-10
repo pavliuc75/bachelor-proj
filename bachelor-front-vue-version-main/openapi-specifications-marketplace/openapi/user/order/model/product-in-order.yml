@@ -1,0 +1,26 @@
+ProductInOrder:
+  type: object
+  properties:
+    id:
+      type: string
+    name:
+      type: string
+      readOnly: true
+    price:
+      type: number
+      readOnly: true
+    description:
+      type: string
+      readOnly: true
+    mainImage:
+      type: object
+      readOnly: true
+      properties:
+        imageKey:
+          type: string
+        imageUrl:
+          type: string
+    amount:
+      type: integer
+    orderStatus:
+      $ref: 'order-status.yml#/OrderStatus'

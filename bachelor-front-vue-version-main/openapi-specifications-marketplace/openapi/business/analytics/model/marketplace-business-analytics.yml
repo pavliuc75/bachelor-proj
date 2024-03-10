@@ -1,0 +1,17 @@
+MarketplaceBusinessAnalytics:
+  type: object
+  properties:
+    totalRevenue:
+      type: number
+    totalNumberOfOrders:
+      type: integer
+    totalNumberOfCompletedOrders:
+      type: integer
+    totalNumberOfInProgressOrders:
+      type: integer
+    totalNumberOfProducts:
+      type: integer
+    totalNumberOfCustomers:
+      type: integer
+    totalNumberOfBusinesses:
+        type: integer

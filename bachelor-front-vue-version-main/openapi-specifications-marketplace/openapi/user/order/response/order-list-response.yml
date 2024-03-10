@@ -1,0 +1,12 @@
+OrderListResponse:
+  type: object
+  properties:
+    orderList:
+      type: array
+      items:
+        $ref: '../model/order.yml#/Order'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

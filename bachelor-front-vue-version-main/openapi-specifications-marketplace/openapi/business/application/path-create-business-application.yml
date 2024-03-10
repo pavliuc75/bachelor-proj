@@ -1,0 +1,22 @@
+post:
+  description: Create new business application
+  operationId: createBusinessApplication
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-business-application-request.yml#/CreateBusinessApplicationRequest'
+  responses:
+    '201':
+      description: Business application submitted
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business-application.yml#/BusinessApplication'
+    '404':
+      description: Legal documents were not found
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

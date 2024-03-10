@@ -1,0 +1,30 @@
+get:
+  description: Get order to fulfill for business owner
+  operationId: getOrderToFulfillList
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: "filterBy"
+      required: false
+      schema:
+        $ref: 'model/order-status.yml#/OrderStatus'
+  responses:
+    '201':
+      description: List of products
+      content:
+        application/json:
+          schema:
+            $ref: 'response/order-to-fulfill-list-response.yml#/OrderToFulfillListResponse'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,16 @@
+.MuiDialog-root .MuiBackdrop-root {
+    background-color: var(--background) !important;
+}
+
+.MuiPaper-elevation {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.MuiDialog-paper {
+    border: 1px solid var(--mid-gray) !important;
+    padding: 32px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+}

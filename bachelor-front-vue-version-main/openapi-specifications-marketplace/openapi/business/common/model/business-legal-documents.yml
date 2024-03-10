@@ -1,0 +1,20 @@
+BusinessLegalDocuments:
+  type: object
+  required:
+    - registrationCertificateKey
+    - registrationCertificateFileUrl
+    - bankStatementFileKey
+    - bankStatementFileUrl
+  properties:
+    registrationCertificateKey:
+      description: File key from AWS S3 bucket
+      type: string
+    registrationCertificateFileUrl:
+      description: AWS S3 Object Url to bank statement file
+      type: string
+    bankStatementFileKey:
+      description: File key from AWS S3 bucket
+      type: string
+    bankStatementFileUrl:
+      description: AWS S3 Object Url to bank statement file
+      type: string

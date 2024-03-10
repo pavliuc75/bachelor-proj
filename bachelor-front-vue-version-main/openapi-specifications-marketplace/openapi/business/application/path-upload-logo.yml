@@ -1,0 +1,27 @@
+put:
+  description: Upload company logo for the business application
+  operationId: uploadCompanyLogo
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          required:
+            - logo
+            - bankStatement
+          properties:
+            logoFile:
+              description: Logo
+              format: binary
+              type: string
+  responses:
+    '201':
+      description: Logo was uploaded
+      content:
+        application/json:
+          schema:
+            $ref: '../common/model/business-company-logo.yml#/BusinessLogo'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

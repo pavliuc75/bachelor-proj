@@ -1,0 +1,19 @@
+patch:
+  description: update category
+  operationId: updateCategory
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/update-category-request.yml#/UpdateCategoryRequest'
+  responses:
+    '201':
+      description: updatedCategory
+      content:
+        application/json:
+          schema:
+            $ref: 'model/category.yml#/Category'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

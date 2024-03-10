@@ -1,0 +1,5 @@
+TemplateRequest:
+  type: object
+  properties:
+    email:
+      $ref: '../model/fields/email.yml#/FieldTemplate'

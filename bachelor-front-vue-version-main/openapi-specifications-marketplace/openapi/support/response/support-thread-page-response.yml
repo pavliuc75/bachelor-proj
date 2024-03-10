@@ -1,0 +1,14 @@
+SupportThreadPageResponse:
+  type: object
+  required:
+    - SupportThreadPageList
+  properties:
+    SupportThreadPageList:
+      type: array
+      items:
+        $ref: '../model/support-thread.yml#/SupportThread'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

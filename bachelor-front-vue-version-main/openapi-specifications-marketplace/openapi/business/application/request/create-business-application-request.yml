@@ -1,0 +1,17 @@
+CreateBusinessApplicationRequest:
+  type: object
+  required:
+    - businessDescription
+    - businessPaymentDetails
+    - businessLegalDocuments
+  properties:
+    businessDescription:
+      $ref: '../../common/model/business-description.yml#/BusinessDescription'
+    businessPaymentDetails:
+      $ref: '../../common/model/business-payment-details.yml#/BusinessPaymentDetails'
+    businessLegalDocuments:
+      $ref: '../../common/model/business-legal-documents.yml#/BusinessLegalDocuments'
+    businessContacts:
+      $ref: '../../common/model/business-contacts.yml#/BusinessContacts'
+    businessLogo:
+      $ref: '../../common/model/business-company-logo.yml#/BusinessLogo'

@@ -1,0 +1,14 @@
+[data-css='ProductItemFromOrder'] {
+  td:first-child p {
+    @apply mr-4;
+  }
+
+  table td {
+    border-top: 8px solid transparent;
+    vertical-align: top;
+  }
+
+  table tr:first-child td {
+    border-top: 0;
+  }
+}

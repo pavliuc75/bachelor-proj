@@ -1,0 +1,17 @@
+ProductRating:
+  type: object
+  properties:
+    fiveStar:
+      type: integer
+    fourStar:
+        type: integer
+    threeStar:
+        type: integer
+    twoStar:
+        type: integer
+    oneStar:
+        type: integer
+    overallRating:
+        type: number
+    totalRatings:
+        type: integer

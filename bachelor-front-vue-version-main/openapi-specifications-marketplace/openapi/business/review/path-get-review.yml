@@ -1,0 +1,21 @@
+get:
+  description: get review by id
+  operationId: getReviewById
+  parameters:
+    - in: query
+      name: businessReviewId
+      description: review id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      description: review given
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business-application-review.yml#/BusinessApplicationReview'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,19 @@
+post:
+  description: Path template
+  operationId: createTemplate
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/template-request.yml#/TemplateRequest'
+  responses:
+    '201':
+      description: New user created
+      content:
+        application/json:
+          schema:
+            $ref: 'response/template-response.yml#/TemplateResponse'
+    '409':
+      $ref: '../api-error.yml#/ApiError'
+    'default':
+      $ref: '../api-error.yml#/ApiError'

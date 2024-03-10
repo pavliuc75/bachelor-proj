@@ -1,0 +1,22 @@
+post:
+  description: Creates a new user, in case it is already present in the keycloak user database. Endpoint should be called when a user logs in with social identity providers(google,facebook)
+  operationId: createSocialUser
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-social-user.yml#/NewSocialUserRequest'
+  responses:
+    '201':
+      description: New social user created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/user.yml#/AppUser'
+    '409':
+      $ref: '../api-error.yml#/ApiError'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []
+

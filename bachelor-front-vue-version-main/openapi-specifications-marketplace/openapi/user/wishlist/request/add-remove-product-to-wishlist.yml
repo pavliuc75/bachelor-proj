@@ -1,0 +1,5 @@
+AddRemoveProductToWishlistRequest:
+  type: object
+  properties:
+    productId:
+      type: string

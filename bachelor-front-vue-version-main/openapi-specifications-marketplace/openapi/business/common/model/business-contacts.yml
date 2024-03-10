@@ -1,0 +1,19 @@
+BusinessContacts:
+  type: object
+  properties:
+    phoneNumber:
+      type: number
+      example: 37378083200
+    email:
+      type: string
+      example: business@gmail.com
+    address:
+      type: string
+      example: business@gmail.com
+    website:
+      type: string
+    facebook:
+      type: string
+    instagram:
+      type: string
+

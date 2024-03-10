@@ -1,0 +1,7 @@
+CategoryApplication:
+  type: object
+  properties:
+    id:
+      type: string
+    category:
+      type: string

@@ -1,0 +1,23 @@
+post:
+  operationId: createCheckoutSession
+  responses:
+    '201':
+      description: Redirect url to checkout
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              redirectUrl:
+                type: string
+                description: Redirect url to checkout
+              success_url:
+                type: string
+              cancel_url:
+                type: string
+    '409':
+      $ref: '../api-error.yml#/ApiError'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

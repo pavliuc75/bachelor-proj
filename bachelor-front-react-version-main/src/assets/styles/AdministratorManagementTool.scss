@@ -1,0 +1,8 @@
+[data-css="AdministratorManagementTool"] {
+  @media (min-width: 640px) {
+    main {
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+  }
+}

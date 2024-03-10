@@ -1,0 +1,9 @@
+UserProductRating:
+  type: object
+  properties:
+    ratedBy:
+      type: string
+    rating:
+      type: number
+    ratedProductId:
+      type: string

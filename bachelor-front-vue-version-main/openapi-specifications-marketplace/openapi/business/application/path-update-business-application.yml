@@ -1,0 +1,22 @@
+patch:
+  description: Update business application
+  operationId: updateBusinessApplication
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/update-business-application-request.yml#/UpdateBusinessApplicationRequest'
+  responses:
+    '201':
+      description: Business application submitted
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business-application.yml#/BusinessApplication'
+    '404':
+      description: Business application with given id not found
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

@@ -1,0 +1,9 @@
+[data-css='EditBusinessPageStepTemplate'] {
+  .hover-no-underline:hover h4 {
+    text-decoration: none !important;
+  }
+
+  .hover-border-blue:hover div {
+    border-color: var(--dark-blue) !important;
+  }
+}

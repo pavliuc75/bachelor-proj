@@ -1,0 +1,18 @@
+patch:
+  description: Patch products in cart
+  operationId: updateProductInCart
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/update-product-in-cart-request.yml#/UpdateProductInCartRequest'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/cart.yml#/Cart'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

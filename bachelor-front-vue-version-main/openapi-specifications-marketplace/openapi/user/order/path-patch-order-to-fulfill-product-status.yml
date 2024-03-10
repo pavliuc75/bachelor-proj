@@ -1,0 +1,21 @@
+patch:
+  description: Updates order to fulfill product status, in case all products have the same status the order status will be updated
+  operationId: patchOrderToFulfillProductStatus
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/patch-order-to-fulfill-product-status-request.yml#/PatchOrderToFulfillProductStatusRequest'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            $ref: 'model/order-to-fulfill.yml#/OrderToFulfill'
+    '404':
+      description: Business application with given id not found
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

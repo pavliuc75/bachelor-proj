@@ -1,0 +1,27 @@
+get:
+  description: get archived support thread page
+  operationId: getArchivedSupportThreadPage
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+  responses:
+    '201':
+      description: List of support threads supplied
+      content:
+        application/json:
+          schema:
+            $ref: 'response/support-thread-page-response.yml#/SupportThreadPageResponse'
+    'default':
+      $ref: '../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

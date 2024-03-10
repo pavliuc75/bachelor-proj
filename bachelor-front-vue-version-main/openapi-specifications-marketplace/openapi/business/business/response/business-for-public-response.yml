@@ -1,0 +1,27 @@
+BusinessForPublicResponse:
+  type: object
+  required:
+    - ownerUserId
+    - businessDescription
+  properties:
+    id:
+      type: string
+    ownerUserId:
+      type: string
+    businessState:
+      $ref: '../model/enum/business-state.yml#/BusinessState'
+    businessDescription:
+      $ref: '../../common/model/business-description.yml#/BusinessDescription'
+    businessContacts:
+      $ref: '../../common/model/business-contacts.yml#/BusinessContacts'
+    businessLogo:
+      $ref: '../../common/model/business-company-logo.yml#/BusinessLogo'
+    createdDate:
+      type: string
+      format: date-time
+    lastModifiedDate:
+      type: string
+      format: date-time
+
+
+

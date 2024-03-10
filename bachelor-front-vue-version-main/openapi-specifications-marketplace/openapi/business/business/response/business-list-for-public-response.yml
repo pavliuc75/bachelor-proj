@@ -1,0 +1,14 @@
+BusinessForPublicListResponse:
+  type: object
+  required:
+    - businessForPublicList
+  properties:
+    businessPageList:
+      type: array
+      items:
+        $ref: 'business-for-public-response.yml#/BusinessForPublicResponse'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

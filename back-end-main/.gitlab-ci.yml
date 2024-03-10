@@ -1,0 +1,49 @@
+variables:
+  CONTAINER_VERSION: '0.3.0'
+  DOCKERFILE_PATH: "distribution/Dockerfile"
+  DOCKER_BUILD_PATH: "distribution"
+  BRANCH_LATEST_TAG: "true"
+  BUILD_EXTRA_OPTIONS: "--build-arg DATABASE_NAME=$DATABASE_NAME --build-arg KEYCLOAK_AUTHSERVERURL=$KEYCLOAK_AUTHSERVERURL --build-arg KEYCLOAK_CREDENTIALS_SECRET=$KEYCLOAK_CREDENTIALS_SECRET --build-arg KEYCLOAK_REALM=$KEYCLOAK_REALM --build-arg KEYCLOAK_RESOURCE=$KEYCLOAK_RESOURCE --build-arg MONGO_DB_URL=$MONGO_DB_URL"
+  MVN_DOCKER_IMAGE_NAME: "maven"
+  MVN_DOCKER_IMAGE_VERSION: "3.8.3-openjdk-17"
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+  GIT_SUBMODULE_STRATEGY: normal
+
+mvn-compile:
+  image: "$MVN_DOCKER_IMAGE_NAME:$MVN_DOCKER_IMAGE_VERSION"
+  stage: build
+  script:
+    - mvn $MAVEN_OPTS compile
+  artifacts:
+    paths:
+      - distribution/target/dependency/*.jar
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - .m2/repository/
+
+#include:
+#  - project: "bitstrive/pipelinetemplates/docker"
+#    ref: "main"
+#    file: "pipeline.yml"
+#
+#mvn-build-test-package:
+#  image: "$MVN_DOCKER_IMAGE_NAME:$MVN_DOCKER_IMAGE_VERSION"
+#  stage: build
+#  script:
+#    - echo "$PUBLISH_VERSION"
+#    - mvn versions:set -DnewVersion="$CONTAINER_VERSION-SNAPSHOT"
+#    - mvn $MAVEN_OPTS package -B
+#  artifacts:
+#    paths:
+#      - distribution/target/dependency/*.jar
+#  cache:
+#    key: ${CI_COMMIT_REF_SLUG}
+#    paths:
+#      - .m2/repository/
+#
+#
+#publish test image:
+#  needs: ["mvn-build-test-package"]
+
+

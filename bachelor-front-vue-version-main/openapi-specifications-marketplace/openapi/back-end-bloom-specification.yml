@@ -1,0 +1,162 @@
+openapi: 3.0.3
+info:
+  title: bloom backend open api specification
+  description: bloom backend open api specification
+  version: '1.1.0'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+#   user api - user endpoints
+  /users/create-customer:
+    $ref: user/path-create-customer.yml
+  /users/create-social-customer:
+    $ref: user/path-create-social-customer.yml
+  /users/get-current-user-data:
+    $ref: user/path-get-current-user-info.yml
+  /users/get-current-user-business-data:
+    $ref: user/path-get-current-user-business-info.yml
+
+
+# user api - user-cart endpoints
+  /user-cart/update-product-in-cart:
+    $ref: user/cart/path-update-product-in-cart.yml
+  /user-cart/delete-product-in-cart:
+    $ref: user/cart/path-delete-product-in-cart.yml
+  /user-cart/post-product-in-cart:
+    $ref: user/cart/path-post-cart.yml
+  /user-cart/recycle-cart:
+    $ref: user/cart/path-recycle-cart.yml
+  /user-cart/get-cart:
+    $ref: user/cart/path-get-cart.yml
+
+  # user order
+  /user-order/get-order-list:
+    $ref: user/order/path-get-order-list.yml
+  /user-order/get-order-to-fulfill-list:
+    $ref: user/order/path-get-order-to-fulfill-list.yml
+  /user-order/update-order-to-fulfill-product-status:
+    $ref: user/order/path-patch-order-to-fulfill-product-status.yml
+  /user-order/update-order-to-fulfill-status:
+    $ref: user/order/path-patch-order-to-fulfill-status.yml
+
+# user wishlist
+  /user-wishlist/add-product-to-wishlist:
+    $ref: user/wishlist/path-post-product-to-wishlist.yml
+  /user-wishlist/remove-product-to-wishlist:
+    $ref: user/wishlist/path-remove-product-to-wishlist.yml
+  /user-wishlist/get-user-wishlist:
+    $ref: user/wishlist/path-get-user-wishlist.yml
+
+#   business api - business application endpoints
+  /business-application/create-business-application:
+    $ref: business/application/path-create-business-application.yml
+  /business-application/update-business-application:
+    $ref: business/application/path-update-business-application.yml
+  /business-application/upload-legal-documents:
+    $ref: business/application/path-upload-legal-documents.yml
+  /business-application/upload-logo:
+    $ref: business/application/path-upload-logo.yml
+  /business-application/download-legal-document/{fileKeyBase64Encoded}:
+    $ref: business/application/path-download-legal-document.yml
+  /business-application/get-application-list:
+    $ref: business/application/path-get-business-application-list.yml
+  /business-application/get-application-by-id:
+    $ref: business/application/path-get-business-application.yml
+
+#   business api - business review endpoints
+  /business-review/create-review:
+    $ref: business/review/path-create-business-review.yml
+  /business-review/update-review:
+    $ref: business/review/path-update-business-review.yml
+  /business-review/get-review-by-id:
+    $ref: business/review/path-get-review.yml
+
+#   business api - business endpoints
+  /business/get-business-by-id:
+    $ref: business/business/path-get-business.yml
+  /business/get-business-for-public-by-id:
+    $ref: business/business/path-get-business-for-public-by-id.yml
+  /business/get-business-list-for-public:
+    $ref: business/business/path-get-business-list-for-public.yml
+  /business/get-business-list-for-admin:
+    $ref: business/business/path-get-business-list-for-admin.yml
+  /business/search-business:
+    $ref: business/business/path-search-business.yml
+  /business/update-business:
+    $ref: business/business/path-update-business-by-id.yml
+
+  #   business analytics api - business application endpoints
+  /business-analytics/get-public-business-analytics:
+    $ref: business/analytics/path-get-public-business-analytics.yml
+  /business-analytics/get-private-business-analytics:
+    $ref: business/analytics/path-get-private-business-analytics.yml
+  /business-analytics/get-marketplace-analytics:
+    $ref: business/analytics/path-get-marketplace-analytics.yml
+
+#   product api - category endpoints
+  /category/create-category-application:
+    $ref: products/category/path-create-category-application.yml
+  /category/get-category-application-list:
+    $ref: products/category/path-get-category-application-list.yml
+  /category/get-category-list:
+    $ref: products/category/path-get-category-list.yml
+  /category/handle-category-application-request:
+    $ref: products/category/path-handle-category-request.yml
+  /category/delete-category-by-id:
+    $ref: products/category/path-delete-category.yml
+  /category/update-category:
+    $ref: products/category/path-update-category.yml
+
+#   product api - product endpoints
+  /products/upload-product-image:
+    $ref: products/product/path-upload-product-image.yml
+  /products/create-product:
+    $ref: products/product/path-create-product.yml
+  /products/patch-product:
+    $ref: products/product/path-patch-product.yml
+  /products/get-products-by-business:
+    $ref: products/product/path-get-products-by-business.yml
+  /products/get-product:
+    $ref: products/product/path-get-product.yml
+  /products/delete-product:
+    $ref: products/product/path-delete-product.yml
+  /products/search-autocomplete-product:
+    $ref: products/product/path-search-autocomplete-product.yml
+  /products/search-product:
+    $ref: products/product/path-search-product.yml
+  /products/rate-product:
+    $ref: products/product/path-rate-product.yml
+
+#   product api - comments endpoints
+  /comment/create-new-comment:
+    $ref: products/comment/path-create-new-comment.yml
+  /comment/create-new-comment-reply:
+    $ref: products/comment/path-create-new-comment-reply.yml
+  /comment/get-comments-by-product-id:
+    $ref: products/comment/path-get-comment-tree-by-product-id.yml
+
+# support api - support thread endpoints
+  /support-thread/close-support-thread:
+    $ref: support/path-close-support-thread.yml
+  /support-thread/create-support-thread:
+    $ref: support/path-create-support-thread.yml
+  /support-thread/get-actvie-support-thread-for-current-user:
+    $ref: support/path-get-active-support-thread-for-current-user.yml
+  /support-thread/get-active-support-thread-page:
+    $ref: support/path-get-active-support-thread-page.yml
+  /support-thread/get-archieved-support-thread-page:
+    $ref: support/path-get-archived-support-thread-page.yml
+
+# support api - thread reply endpoints
+  /support-thread-reply/create-thread-reply:
+    $ref: support/path-create-thread-reply-for-given-thread.yml
+  /support-thread-reply/get-thread-replies-page:
+    $ref: support/path-get-thread-replies-page-for-given-thread.yml
+
+# checkout api
+  /checkout/create-checkout-session:
+    $ref: checkout/path-create-checkout-session.yml

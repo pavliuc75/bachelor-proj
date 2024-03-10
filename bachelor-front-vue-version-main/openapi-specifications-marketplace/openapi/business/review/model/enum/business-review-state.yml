@@ -1,0 +1,5 @@
+BusinessReviewState:
+  type: string
+  enum:
+    - Approved
+    - Denied

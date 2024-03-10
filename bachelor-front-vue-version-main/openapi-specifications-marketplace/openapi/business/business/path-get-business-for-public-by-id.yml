@@ -1,0 +1,21 @@
+get:
+  description: get business for public by id
+  operationId: getBusinessForPublicById
+  parameters:
+    - in: query
+      name: businessId
+      description: business id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      description: Business for public given
+      content:
+        application/json:
+          schema:
+            $ref: 'response/business-for-public-response.yml#/BusinessForPublicResponse'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

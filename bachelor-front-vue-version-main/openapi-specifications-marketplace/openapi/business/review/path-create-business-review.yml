@@ -1,0 +1,22 @@
+post:
+  description: Create new business application review
+  operationId: createBusinessApplicationReview
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/create-business-review-request.yml#/CreateBusinessReviewRequest'
+  responses:
+    '201':
+      description: Business application has been submitted
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business-application-review.yml#/BusinessApplicationReview'
+    '400':
+      description: Something went wrong with data validation
+      $ref: '../../api-error.yml#/ApiError'
+    'default':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: []

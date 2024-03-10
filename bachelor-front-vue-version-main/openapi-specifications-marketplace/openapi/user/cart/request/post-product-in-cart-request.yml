@@ -1,0 +1,7 @@
+AddProductToCartRequest:
+  type: object
+  properties:
+    id:
+      type: string
+    amount:
+      type: integer

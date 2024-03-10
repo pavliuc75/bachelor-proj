@@ -1,0 +1,10 @@
+[data-css="Product"] {
+  .fa-cubes {
+    font-size: 24px !important;
+  }
+  
+  .reviews-wrapper:hover .target-hover-heading, .reviews-wrapper:hover .target-hover-icon {
+    text-decoration: underline;
+    color: var(--cinder) !important;
+  }
+}

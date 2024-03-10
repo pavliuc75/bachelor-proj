@@ -1,0 +1,14 @@
+NewUserRequest:
+  type: object
+  required:
+    - email
+    - password
+  properties:
+    email:
+      $ref: '../model/fields/email.yml#/Email'
+    password:
+      $ref: '../model/fields/password.yml#/Password'
+    firstName:
+      $ref: '../model/fields/first-name.yml#/FirstName'
+    lastName:
+      $ref: '../model/fields/last-name.yml#/LastName'

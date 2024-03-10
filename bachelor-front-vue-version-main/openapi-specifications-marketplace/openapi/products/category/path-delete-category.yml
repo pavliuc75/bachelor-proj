@@ -1,0 +1,22 @@
+delete:
+  description: delete category by id for admin
+  operationId: deleteCategoryById
+  parameters:
+    - in: query
+      name: categoryId
+      description: categoryId
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: id of deleted category
+      content:
+        application/json:
+          name: deletedId
+          schema:
+            type: string
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,10 @@
+ProductImage:
+  type: object
+  properties:
+    imageKey:
+      description: File key from AWS S3 bucket
+      example: business/kek10@gmail.com/products/72eac32b-b57f-4427-86fd-e3086e3cad2b.jfif
+      type: string
+    imageUrl:
+      example: https://marketplace-storage-public.s3.eu-north-1.amazonaws.com/business/kek10%40gmail.com/products/72eac32b-b57f-4427-86fd-e3086e3cad2b.jfif
+      type: string

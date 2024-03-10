@@ -1,0 +1,12 @@
+BusinessApplicationListRequest:
+  type: object
+  required:
+    -pageSize
+    -pageNumber
+  properties:
+    pageSize:
+      type: integer
+      example: 10
+    pageNumber:
+      type: integer
+      example: 0

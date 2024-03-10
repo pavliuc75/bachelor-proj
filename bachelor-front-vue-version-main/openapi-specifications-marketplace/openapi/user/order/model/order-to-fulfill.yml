@@ -1,0 +1,20 @@
+OrderToFulfill:
+  type: object
+  properties:
+    id:
+      type: string
+    productList:
+      type: array
+      items:
+        $ref: 'product-in-order.yml#/ProductInOrder'
+    fulfilledBy:
+      type: string
+    orderedBy:
+      type: string
+    shippingDetails:
+      $ref: 'shipping-details.yml#/ShippingDetails'
+    createdDate:
+      type: string
+      format: date-time
+    orderStatus:
+      $ref: 'order-status.yml#/OrderStatus'

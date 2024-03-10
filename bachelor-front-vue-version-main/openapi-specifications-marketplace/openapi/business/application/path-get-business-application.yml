@@ -1,0 +1,21 @@
+get:
+  description: get business application by id
+  operationId: getBusinessApplicationById
+  parameters:
+    - in: query
+      name: businessApplicationId
+      description: id of business application
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      description: Business application given
+      content:
+        application/json:
+          schema:
+            $ref: 'model/business-application.yml#/BusinessApplication'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

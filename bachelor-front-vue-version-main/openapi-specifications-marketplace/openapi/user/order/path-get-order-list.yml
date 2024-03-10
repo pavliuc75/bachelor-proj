@@ -1,0 +1,30 @@
+get:
+  description: Get customers order list
+  operationId: getOrderList
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: "filterBy"
+      required: false
+      schema:
+        $ref: 'model/order-status.yml#/OrderStatus'
+  responses:
+    '201':
+      description: List of products
+      content:
+        application/json:
+          schema:
+            $ref: 'response/order-list-response.yml#/OrderListResponse'
+  security:
+    - bearerAuth: [ ]

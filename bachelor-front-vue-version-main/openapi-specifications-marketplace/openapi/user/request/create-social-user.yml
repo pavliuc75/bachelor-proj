@@ -1,0 +1,9 @@
+NewSocialUserRequest:
+  type: object
+  properties:
+    email:
+      $ref: '../model/fields/email.yml#/Email'
+    firstName:
+      $ref: '../model/fields/first-name.yml#/FirstName'
+    lastName:
+      $ref: '../model/fields/last-name.yml#/LastName'

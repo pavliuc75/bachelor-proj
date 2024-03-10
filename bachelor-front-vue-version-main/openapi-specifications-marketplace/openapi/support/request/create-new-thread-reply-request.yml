@@ -1,0 +1,7 @@
+CreateNewThreadReplyRequest:
+  type: object
+  properties:
+    supportThreadId:
+      type: string
+    text:
+      type: string

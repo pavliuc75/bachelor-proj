@@ -1,0 +1,33 @@
+get:
+  description: get comment tree list by product id
+  operationId: getCommentTreeListForProduct
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: productId
+      description: product id
+      required: true
+      schema:
+        type: string
+  responses:
+    '201':
+      description: List of comment trees of the product supplied
+      content:
+        application/json:
+          schema:
+            $ref: 'response/comment-tree-list-response.yml#/CommentTreeListResponse'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

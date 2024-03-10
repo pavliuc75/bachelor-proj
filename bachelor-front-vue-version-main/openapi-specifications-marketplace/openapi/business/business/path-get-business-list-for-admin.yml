@@ -1,0 +1,27 @@
+get:
+  description: get business list for admin
+  operationId: getBusinessListForAdmin
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+  responses:
+    '201':
+      description: List of business supplied
+      content:
+        application/json:
+          schema:
+            $ref: 'response/business-list-for-admin-response.yml#/BusinessForAdminListResponse'
+    '404':
+      $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]

@@ -1,0 +1,14 @@
+BusinessForAdminListResponse:
+  type: object
+  required:
+    - businessForAdminList
+  properties:
+    businessPageList:
+      type: array
+      items:
+        $ref: '../model/business.yml#/Business'
+    totalAmountOfPages:
+      type: integer
+    totalAmountOfElements:
+      type: integer
+      format: int64

@@ -1,0 +1,22 @@
+[data-css="ProductsShelfItem"] {
+  @apply flex flex-col pt-16 pb-10;
+
+  svg {
+    &:hover {
+      @apply text-dark-blue cursor-pointer;
+    }
+  }
+
+  a {
+    @apply cursor-default;
+  }
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}

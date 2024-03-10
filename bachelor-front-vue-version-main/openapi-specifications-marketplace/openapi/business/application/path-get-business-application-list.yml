@@ -1,0 +1,27 @@
+get:
+  description: get business application list
+  operationId: getBusinessApplicationList
+  parameters:
+    - in: query
+      name: pageSize
+      description: paginationSize
+      required: true
+      schema:
+        type: integer
+    - in: query
+      name: pageNumber
+      description: page number
+      required: true
+      schema:
+        type: integer
+  responses:
+    '201':
+        description: List of applications supplied
+        content:
+          application/json:
+            schema:
+              $ref: 'response/business-application-list-response.yml#/BusinessApplicationListResponse'
+    '404':
+        $ref: '../../api-error.yml#/ApiError'
+  security:
+    - bearerAuth: [ ]
